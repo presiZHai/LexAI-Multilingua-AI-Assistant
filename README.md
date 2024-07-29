@@ -1,112 +1,61 @@
 # LexAI: A Multilingual AI Assistant
 
+## How to replicate this work
+1. Clone the github repository.
 
-# How to run?
-### STEPS:
-
-Clone the repository
-
+2. Create and activate a conda environment 
 ```bash
-Project repo: https://github.com/
+conda create -n {name} python=3.10 -y
 ```
-### STEP 01- Create a conda environment after opening the repository
-
 ```bash
-conda create -n llmapp python=3.8 -y
+conda activate {name}
 ```
-
-```bash
-conda activate llmapp
-```
-
-
-### STEP 02- install the requirements
+3. Install the requirements and dependencies
 ```bash
 pip install -r requirements.txt
 ```
-
-### Create a `.env` file in the root directory and add your GOOGLE_API_KEY credentials as follows:
-
+3. Create a .env file in the root directory and add GOOGLE_API_KEY credentials as follows:
 ```ini
 GOOGLE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
-
-
-```bash
-# Finally run the following command
+4. Finally, run the streamlit app
+```bash 
 streamlit run app.py
 ```
 
-Now,
-```bash
-open up localhost:
-```
+# Deploy streamlit app on EC2 instance
 
+1. Login with your AWS console and launch an EC2 instance
 
-### Techstack Used:
-
-- Python
-- Google API
-- Streamlit
-- PaLM2
-- s2t
-- t2s
-
-
-
-# How to Deploy Streamlit app on EC2 instance
-
-## 1. Login with your AWS console and launch an EC2 instance
-
-## 2. Run the following commands
-
-### Note: Do the port mapping to this port:- 8501
-
+2. Run the following commands
 ```bash
 sudo apt update
 ```
-
 ```bash
 sudo apt-get update
 ```
-
 ```bash
 sudo apt upgrade -y
 ```
-
 ```bash
 sudo apt install git curl unzip tar make sudo vim wget -y
 ```
-
-
 ```bash
-git clone "Your-repository"
+git clone the github repository
 ```
-
 ```bash
 sudo apt install python3-pip
 ```
-
 ```bash
 pip3 install -r requirements.txt
 ```
-
 ```bash
 #Temporary running
 python3 -m streamlit run app.py
 ```
-
 ```bash
 #Permanent running
 nohup python3 -m streamlit run app.py
 ```
+Note: Streamlit runs on this port: 8501: Don't forget the port mapping to 8501.
 
-Note: Streamlit runs on this port: 8501
-
-
-
-
-
-
-
-# LexAI-Multilingua-AI-Assistant
